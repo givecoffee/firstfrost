@@ -3,9 +3,9 @@
 
   a seasonal garden and hydroponic tracking tool.
 
-  (https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv1.png) 
-  (https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv2.png) 
-  (https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv3.png) 
+  ![Image 1](https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv1.png) 
+  ![Image 2](https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv2.png) 
+  ![Image 3](https://github.com/givecoffee/firstfrost/blob/main/assets/firstfrostv3.png) 
   
   
   ## Running the code
