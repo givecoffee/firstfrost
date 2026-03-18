@@ -1,5 +1,7 @@
 
   # Prototype for FirstFrost 
+
+  a seasonal garden and hydroponic tracking tool.
   
   ## Running the code
 
