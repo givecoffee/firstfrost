@@ -1,0 +1,45 @@
+/* src/index.css */
+/* Week 4 update: imports tokens.css and applies base overrides via @layer */
+
+@import "./styles/tokens.css";
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    /* Prevent iOS font-size inflation on orientation change */
+    -webkit-text-size-adjust: 100%;
+    font-size: var(--text-base); /* 16px minimum */
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.25;
+    color: var(--color-text-primary);
+  }
+
+  /* Focus ring — visible for keyboard users, hidden for mouse */
+  :focus-visible {
+    outline: 2px solid var(--frost-500);
+    outline-offset: 2px;
+  }
+
+  /* Suppress default focus ring for mouse interactions */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
