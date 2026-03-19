@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+node_modules/.bin/
+
+# Lock file (optional)
+# package-lock.json
+
+# ESLint cache
+.eslintcache
+*.sarif
+
+# Build
+dist/
+build/
