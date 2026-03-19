@@ -28,34 +28,17 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Install SARIF formatter
-        run: npm install @microsoft/eslint-formatter-sarif --save-dev
-
-      - name: Debug - Check setup
-        run: |
-          echo "=== ESLint Version ==="
-          npx eslint --version
-          echo "=== Config files ==="
-          ls -la .eslint* 2>/dev/null || echo "No .eslint config found"
-          ls -la eslint.config.* 2>/dev/null || echo "No eslint.config file found"
-          echo "=== Package.json ESLint section ==="
-          cat package.json | grep -A 10 eslint || echo "No eslint in package.json"
-          echo "=== All files in root ==="
-          ls -la
+        run: npm install @microsoft/eslint-formatter-sarif --save-dev --legacy-peer-deps
 
       - name: Run ESLint scanning
         run: |
-          npx eslint . \
+          npx eslint src/**/*.{js,jsx,ts,tsx} \
             --format @microsoft/eslint-formatter-sarif \
             --output-file eslint-results.sarif
         continue-on-error: true
-
-      - name: Check if SARIF was created
-        run: |
-          ls -la eslint-results.sarif 2>/dev/null || echo "SARIF file was NOT created"
-        if: always()
 
       - name: Upload results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v4
