@@ -1,6 +1,3 @@
-// tailwind.config.ts
-// Updated Week 4: fontFamily extension + CSS variable references for theme colors.
-
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,7 +6,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Wired to CSS custom properties set in tokens.css
         heading: ["var(--font-heading)"],
         sans:    ["var(--font-body)"],
         mono:    ["var(--font-mono)"],
